@@ -187,7 +187,7 @@ def fetch_prices_batched(tickers: list[str], period="3mo", batch_size=30) -> dic
             " ".join(batch),
             period=period, interval="1d",
             progress=False, auto_adjust=False,
-            group_by="ticker", threads=True
+            group_by="ticker", threads=False
         )
         if data is None or data.empty:
             continue

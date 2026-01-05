@@ -77,7 +77,7 @@ def fetch_daily_batched(tickers: list[str], period="6mo", batch_size=200) -> dic
             " ".join(batch),
             period=period, interval="1d",
             progress=False, auto_adjust=False,
-            group_by="ticker", threads=True
+            group_by="ticker", threads=False
         )
         if data is None or data.empty:
             continue
@@ -102,7 +102,7 @@ def fetch_5m_batched(tickers: list[str], period="5d", batch_size=30) -> dict[str
             " ".join(batch),
             period=period, interval="5m",
             progress=False, auto_adjust=False,
-            group_by="ticker", threads=True
+            group_by="ticker", threads=False
         )
         if data is None or data.empty:
             continue
