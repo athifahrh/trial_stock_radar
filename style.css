@@ -1,0 +1,93 @@
+:root { --accent:#4b90ff; }
+/* Page background gradient */
+[data-testid="stAppViewContainer"] > .main { background: linear-gradient(135deg, #eaf2ff 0%, #f7fbff 35%, #ffffff 100%); }
+
+/* Sidebar gradient */
+section[data-testid="stSidebar"] > div:first-child { background: linear-gradient(180deg, #f0f6ff 0%, #ffffff 100%); border-right: 1px solid #e6efff; }
+
+/* Center main content and limit width for nicer layout */
+.block-container { max-width: 1200px; padding-top: 1rem; }
+
+/* Divider */
+.hr-soft { height: 1px; background: linear-gradient(90deg, transparent, #d9e6ff, transparent); border: 0; margin: .5rem 0 1rem; }
+
+/* Glass card */
+.card { margin-top: 18px; background: #ffffffbf; border: 1px solid rgba(75,144,255,.22); border-radius: 14px; padding: 18px 20px; backdrop-filter: blur(6px); box-shadow: 0 4px 14px rgba(75,144,255,.08); }
+
+.card h4 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 1.3rem;
+  color: #0b1220;
+  font-weight: 700;
+}
+
+/* Metric grid: fixed columns on wide, wrap on narrow */
+.metrics { display: grid; grid-template-columns: repeat(4, minmax(220px,1fr)); gap: 12px; margin: 8px 0 6px; }
+@media (max-width: 1200px) { .metrics { grid-template-columns: repeat(3, minmax(220px,1fr)); } }
+@media (max-width: 900px) { .metrics { grid-template-columns: repeat(2, minmax(220px,1fr)); } }
+@media (max-width: 600px) { .metrics { grid-template-columns: 1fr; } }
+.metric { min-height: 96px; border-radius: 12px; padding: 12px 14px; background: linear-gradient(180deg, rgba(255,255,255,.95), rgba(242,248,255,.9)); border: 1px solid #e3efff; box-shadow: 0 3px 10px rgba(17,25,40,0.06); }
+.metric .k { font-size: 12px; color: #455f86; margin-bottom: 6px; display:flex; align-items:center; gap:8px; font-weight: 600; }
+.metric .v { font-size: 20px; font-weight: 800; color: #0b1220; }
+.badge { display:inline-block; padding: 1px 7px; border-radius: 999px; font-size: 11px; background: #eaf2ff; color:#2a64d6; border:1px solid #d6e6ff; }
+
+/* Buttons */
+.stButton > button { border-radius: 10px; border: 1px solid #cde0ff; background: linear-gradient(180deg,#f7fbff,#eaf2ff); color:#0b1220; }
+.stButton > button:hover { border-color:#aac8ff; box-shadow:0 6px 18px rgba(75,144,255,.12); }
+button[kind="secondary"] {
+  margin-top: 14px;   /* adjust this number to your liking */
+}
+
+/* Tighten default top spacing under headers */
+h2, .stMarkdown h2 { margin-top: .3rem; }
+
+/* A small, neat card to sit under the metric tiles */
+.card-spacer {
+  margin-top: 14px;              /* space from tiles */
+  background: rgba(255,255,255,0.75); border: 1px solid rgba(75,144,255,.22); border-radius: 14px; padding: 12px 14px; backdrop-filter: blur(6px); box-shadow: 0 4px 14px rgba(75,144,255,.08);}
+.subtle-subtitle { margin: .6rem 0 .4rem; font-size: 0.95rem; color: #3e597f; font-weight: 700; letter-spacing: .2px; }
+
+
+/* Subtitle */
+.subtle-subtitle {
+  margin: .6rem 0 .4rem;
+  font-size: 0.95rem;
+  color: #3e597f;
+  font-weight: 700;
+  letter-spacing: .2px;
+}
+
+/* 3-up metric grid for each person */
+.metrics-3 {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 6px 0 8px;
+}
+
+/* responsive collapse */
+@media (max-width: 1100px) { .metrics-3 { grid-template-columns: repeat(2, minmax(220px,1fr)); } }
+@media (max-width: 700px)  { .metrics-3 { grid-template-columns: 1fr; } }
+
+
+/* Single row for Equity tiles (4 across → 2 → 1) */
+.equity-row { display:grid; grid-template-columns: repeat(4, minmax(220px,1fr)); gap: 16px; margin-top: 6px; }
+@media (max-width: 1100px) { .equity-row { grid-template-columns: repeat(2, minmax(220px,1fr)); } }
+@media (max-width: 600px)  { .equity-row { grid-template-columns: 1fr; } }
+
+
+.card {
+  margin-top: 18px;
+  margin-bottom: 18px;
+  padding: 18px 20px;
+}
+.card h4 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 1.3rem;
+  color: #0b1220;
+  font-weight: 700;
+}
